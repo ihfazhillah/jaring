@@ -48,7 +48,7 @@
         "state": {
           "type": "search",
           "state": {
-            "query": "",
+            "query": "tag:#Kawan",
             "matchingCase": false,
             "explainSearch": false,
             "collapseAll": false,
@@ -83,7 +83,7 @@
         }
       }
     ],
-    "currentTab": 0
+    "currentTab": 1
   },
   "right": {
     "id": "e748e19e561bc626",
@@ -147,7 +147,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d9797fe78e453ab8",
+  "active": "174278937ee74a1d",
   "lastOpenFiles": [
     "Untitled.md",
     "2025-02-15 Seburuk buruk kawan.md"
