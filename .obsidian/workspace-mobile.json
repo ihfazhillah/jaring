@@ -11,10 +11,14 @@
             "id": "ab6308298c2a4a9c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "2025-02-15 Seburuk buruk kawan.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "2025-02-15 Seburuk buruk kawan"
             }
           }
         ]
