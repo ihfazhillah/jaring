@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2025-02-15 Seburuk buruk kawan.md",
+                "file": "2025-02-15.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-02-15 Seburuk buruk kawan"
+              "title": "2025-02-15"
             }
           }
         ]
@@ -150,6 +150,7 @@
   "active": "d9797fe78e453ab8",
   "lastOpenFiles": [
     "2025-02-15 Seburuk buruk kawan.md",
+    "2025-02-15.md",
     "Untitled.md"
   ]
 }
