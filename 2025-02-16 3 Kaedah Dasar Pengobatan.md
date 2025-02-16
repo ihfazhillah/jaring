@@ -19,4 +19,4 @@ Begitu juga Alloh memberikan keringanan bagi seorang yang sedang safar dan sedan
 
 Adapun point ketiga, maka syareat memerintahkan untuk menggundul kepala orang yang sedang ihrom ketika dikepalanya ada kutu yang mengganggu dia. Dan disuruh mengganti dengan puasa, sedekah atau menyembelih. Padahal pada saat ihrom, menggundul kepala itu haram hukumnya. 
 
-و
+ومن كان منكم مريضا أو به أذى من رأسه ففدية من صيام أو صدقة أو نسك
