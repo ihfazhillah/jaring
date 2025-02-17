@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "8196971e65f04360",
+        "id": "83f1d178fcbc3e2d",
         "type": "tabs",
         "children": [
           {
-            "id": "dbefa851a4a9f7cc",
+            "id": "d83faa2bfb23f87e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Untitled.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "New tab"
             }
           }
         ]
@@ -147,10 +143,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "dbefa851a4a9f7cc",
+  "active": "d83faa2bfb23f87e",
   "lastOpenFiles": [
-    "2025-02-17 Kunci Sukses.md",
     "Untitled.md",
+    "2025-02-17 Kunci Sukses.md",
     "2025-02-16 3 Kaedah Dasar Pengobatan.md",
     "2025-02-16 Larangan untuk menjadi sebab gangguan.md",
     "2025-02-16 Sabar dan Yakin.md",
