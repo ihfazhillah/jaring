@@ -11,10 +11,14 @@
             "id": "dbefa851a4a9f7cc",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "2025-02-17.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "2025-02-17"
             }
           }
         ]
@@ -145,11 +149,12 @@
   },
   "active": "dbefa851a4a9f7cc",
   "lastOpenFiles": [
+    "Untitled.md",
+    "2025-02-17.md",
     "2025-02-16 3 Kaedah Dasar Pengobatan.md",
     "2025-02-16 Larangan untuk menjadi sebab gangguan.md",
     "2025-02-16 Sabar dan Yakin.md",
     "2025-02-15 Seburuk buruk kawan.md",
-    "2025-02-15 Fokus Pada Kualitas, Bukan Jumlah.md",
-    "Untitled.md"
+    "2025-02-15 Fokus Pada Kualitas, Bukan Jumlah.md"
   ]
 }
