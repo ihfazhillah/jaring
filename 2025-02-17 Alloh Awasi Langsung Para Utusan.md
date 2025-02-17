@@ -2,6 +2,8 @@ Pertanyaan penting, bagaimana kita bisa tahu bahwa para utusan Alloh benar benar
 
 Alloh sudah jawab di banyak tempat **Alloh yang menjaga, mengawasi mereka. Alloh memilih mereka dengan hikmahNya dan Alloh mengawasi.**
 
+![](https://youtu.be/BAVS74mfu0w?si=FNKWmY8YyILOJy5y)
+
 Contoh Alloh berfirman di surat Al Haqqoh
 
 ولو تقول علينا بعض الأقاويل، لأخذنا منه باليمين، ثم لقطعنا منه الوتين، فما منكم من أحد عمه حاجزين
