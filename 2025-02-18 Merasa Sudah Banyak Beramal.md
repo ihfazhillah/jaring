@@ -14,4 +14,4 @@ Orang orang lemah iman, dengan islamnya mereka, mereka sudah merasa paling berja
 
 يمنون عليك أن أسلموا قل لا تمنوا علي إسلامكم بل الله يمن عليكم أن هداكم للإيمان إن كنتم صادقين
 
-Mereka merasa berjasa karena mereka sudah berislam. Katakanlah: "Jangan kalian merasa berjasa kepada saya karena kalian masuk islam"
+Mereka merasa berjasa karena mereka sudah berislam. Katakanlah: "Jangan kalian merasa berjasa kepada saya karena kalian masuk islam". Yang benar, Alloh lah yang memiliki jasa atas diri kalian karena Dia memberikan hidayah kepada kalian untuk beriman, kalau kalian benar benar jujur.
