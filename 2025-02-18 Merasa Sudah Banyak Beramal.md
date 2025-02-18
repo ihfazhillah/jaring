@@ -9,3 +9,7 @@ Wahai jiwa, amalanmu sekalipun tidak akan menambah kekayaan Sang raja diraja. La
 Wahai jiwa, sedikitpun amalanmu, tidak akan mengurangi kekayaan Sang Maha Kaya. Lalu, kenapa kamu bakhil terhadap kewajibanmu sendiri?
 
 Sang utusanpun Alloh ingatkan, tidakkah kamu lebih berhak untuk mendengarkan?
+
+Orang orang lemah iman, dengan islamnya mereka, mereka sudah merasa paling berjasa
+
+يمنون عليك أن أسلموا قل لا تمنوا علي إسلامكم بل الله يمن عليكم أن هداكم للإيمان إن كنتم 
