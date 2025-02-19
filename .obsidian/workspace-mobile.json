@@ -36,7 +36,8 @@
         "state": {
           "type": "file-explorer",
           "state": {
-            "sortOrder": "alphabetical"
+            "sortOrder": "alphabetical",
+            "autoReveal": false
           },
           "icon": "lucide-folder-closed",
           "title": "Files"
@@ -48,7 +49,7 @@
         "state": {
           "type": "search",
           "state": {
-            "query": "tag:#Kawan",
+            "query": "",
             "matchingCase": false,
             "explainSearch": false,
             "collapseAll": false,
@@ -83,7 +84,7 @@
         }
       }
     ],
-    "currentTab": 1
+    "currentTab": 0
   },
   "right": {
     "id": "e748e19e561bc626",
@@ -147,7 +148,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d83faa2bfb23f87e",
+  "active": "174278937ee74a1d",
   "lastOpenFiles": [
     "attachments/IMG-20250218-WA0049.jpg",
     "attachments",
