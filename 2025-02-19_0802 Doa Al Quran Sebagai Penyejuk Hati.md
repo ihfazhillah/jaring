@@ -1,4 +1,6 @@
-Dalam inti kandungan doa berikut, terdapat beberapa point yang perlu diperhatikan1. Bagi seorang yang sudah bersahabaat dengan qur'an, maka jelas dia meminta kepada Alloh agar alquran yang selalu dia baca, renungi, amalkan menjadi penyejuk hati dan penghilang rasa gundah.
-1. Bagi seorang yang belum, namun ada kemampuan untuk membaca dan memahami, maka ada kandungan permintaan agar Alloh berikan taufiq dia supaya bisa bersahabat dan selalu membaca quran. Sehingga pada akhirnya, quran tersebut akan menjadi pelipur lara dia.
-2. Untuk selain mereka, maka terdapat kandungan permintaan kepada Alloh agar Alloh memberikan kepada dia taufiq untuk mempelajari al quran, memahami, mengamalkan. Sehingga tujuan akhir alquran sebagai penghibur dia tatkala sedih tercapai.
-3. Rohmahnya Alloh, kalaupun sama sekali dia tidak membaca Alquran, doa ini tetap sangat mungkin terealisasi. Diantaranya adalah Alloh kirimkan orang orang yang menjelaskan kandungan al quran kepada dia, sehingga dia mendapatkan ketenangan dengan bacaan dan penjelasan tersebut.
+Dalam inti kandungan doa berikut, terdapat beberapa point yang perlu diperhatikan
+
+1. Bagi seorang yang sudah bersahabaat dengan qur'an, maka jelas dia meminta kepada Alloh agar alquran yang selalu dia baca, renungi, amalkan menjadi penyejuk hati dan penghilang rasa gundah.
+2. Bagi seorang yang belum, namun ada kemampuan untuk membaca dan memahami, maka ada kandungan permintaan agar Alloh berikan taufiq dia supaya bisa bersahabat dan selalu membaca quran. Sehingga pada akhirnya, quran tersebut akan menjadi pelipur lara dia.
+3. Untuk selain mereka, maka terdapat kandungan permintaan kepada Alloh agar Alloh memberikan kepada dia taufiq untuk mempelajari al quran, memahami, mengamalkan. Sehingga tujuan akhir alquran sebagai penghibur dia tatkala sedih tercapai.
+4. Rohmahnya Alloh, kalaupun sama sekali dia tidak membaca Alquran, doa ini tetap sangat mungkin terealisasi. Diantaranya adalah Alloh kirimkan orang orang yang menjelaskan kandungan al quran kepada dia, sehingga dia mendapatkan ketenangan dengan bacaan dan penjelasan tersebut.
