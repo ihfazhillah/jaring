@@ -1,5 +1,5 @@
 Dalam inti kandungan doa berikut, terdapat beberapa point yang perlu diperhatikan
-
+![[attachments/IMG-20250218-WA0049.jpg]]
 1. Bagi seorang yang sudah bersahabaat dengan qur'an, maka jelas dia meminta kepada Alloh agar alquran yang selalu dia baca, renungi, amalkan menjadi penyejuk hati dan penghilang rasa gundah.
 2. Bagi seorang yang belum, namun ada kemampuan untuk membaca dan memahami, maka ada kandungan permintaan agar Alloh berikan taufiq dia supaya bisa bersahabat dan selalu membaca quran. Sehingga pada akhirnya, quran tersebut akan menjadi pelipur lara dia.
 3. Untuk selain mereka, maka terdapat kandungan permintaan kepada Alloh agar Alloh memberikan kepada dia taufiq untuk mempelajari al quran, memahami, mengamalkan. Sehingga tujuan akhir alquran sebagai penghibur dia tatkala sedih tercapai.
