@@ -1,1 +1,0 @@
-![[Screenshot_20250220_083102_Quran 1.jpg]]
