@@ -10,4 +10,8 @@ Hal ini semacam keimanan. Alloh perintahkan hambaNya untuk selalu mengulang ulan
 
 Semakin mengulang, semakin menancap.
 
-يا أيها الذين آمنوا اذكروا الله ذكرا كثيرا و سبحواه بكرة و أصيلا 
+يا أيها الذين آمنوا اذكروا الله ذكرا كثيرا 
+
+و سبحواه بكرة و أصيلا 
+
+هو الذي يصلي عليكم و ملئكته 
