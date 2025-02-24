@@ -9,3 +9,5 @@ Hafalan yang kuat, sejatinya adalah pengulangan yang terus menerus dilakukan ole
 Hal ini semacam keimanan. Alloh perintahkan hambaNya untuk selalu mengulang ulang "mengingatNya". Selalu mengulang ulang sholat tiap hari dan malam. Selalu mengulang ulang membaca pedoman hidupnya.
 
 Semakin mengulang, semakin menancap.
+
+يا أيها الذين آمنوا اذكروا الله ذكرا كثيرا و سبحواه بكرة و أصيلا 
