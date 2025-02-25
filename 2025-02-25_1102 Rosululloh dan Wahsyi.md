@@ -10,4 +10,8 @@ Hati yang pernah tersakiti, mungkin tidak dapat meninggalkan memori memori luka 
 
 Termasuk kebaikan untuk dia adalah menjauh dan melakukan perbuatan yang lebih bermanfaat yang lainnya ketimbang memendam rasa bahkan terus menerus berperang bathin.
 
-Yusuf 'ala
+Yusuf 'alaihis salaam bilang:
+
+إنه من يتق و يصبر فإن الله لا يضيع أجر المحسنين
+
+Sesungguhnya orang yang bertakwa (sehingga tidak melakukan perbuatan perbuatan yang dilarang oleh syareat terhadap orang orang yang mendzolimi, atau pernah menggores luka ke dia, sudah minta maaf ataupun belum) dan bersabar dari segala rasa yang dia dapatkan karena kedzoliman yang orang lakukan, atau gores yang pernah digoreskan, sudah maaf atau belum. Maka sungguh Alloh tidak menyianyiakan ganjaran untuk orang yang berbuat ihsan.
