@@ -9,3 +9,5 @@ Teman, bukan syarat seorang memaafkan dari suatu perbuatan kedzoliman seorang, d
 Hati yang pernah tersakiti, mungkin tidak dapat meninggalkan memori memori luka yang dahulu pernah digoreskan olehnya.
 
 Termasuk kebaikan untuk dia adalah menjauh dan melakukan perbuatan yang lebih bermanfaat yang lainnya ketimbang memendam rasa bahkan terus menerus berperang bathin.
+
+Yusuf 'ala
