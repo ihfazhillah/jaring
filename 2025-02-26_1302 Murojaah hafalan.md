@@ -1,7 +1,7 @@
 Ringkasan video https://youtu.be/7Q7KAlnlfQk?si=J5lafg6q5B9cOXo_
 
 1. Asal dari murojaah adalah menyetorkan tanpa melihat ke mushaf, atau mendengarkan dari rekaman. Yakni, dari hafalanmu.
-2. Minimal 10 hari sekali, kamu selesai murojaah semua hafalanmu. Lebih baik lagi 7 hari sekali.
+2. Minimal 10 hari sekali, kamu selesai murojaah semua hafalanmu. Lebih baik lagi 7 hari sekali. Lebih baik lagi 3 hari sekali. Atau kalau mau lebih mutqin lagi ya tiap hari sekali. (Yg terakhir tidak d sarankan untuk terus menerus dilakukan ~ihfazh)
 3. Murojaah dengan cara hadr.
 4. 
 ----
