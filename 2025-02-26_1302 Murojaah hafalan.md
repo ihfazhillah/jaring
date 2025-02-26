@@ -6,4 +6,4 @@ Beliau penulis 4 buku ttg hafalan alqur'an, dan isi dari video ini tidak lepas d
 3. الحفاظ على الحفاظ
 4. برهان الإتقان
 
-Ketiga buku diatas bisa dicari dan diunduh dari internet. Dan walhamdulillah per 25 Sya'ban 1446 telah selesai bacakan buku ini ke santri. Semoga ja
+Ketiga buku diatas bisa dicari dan diunduh dari internet. Dan walhamdulillah per 25 Sya'ban 1446 telah selesai bacakan buku ini ke santri. Semoga jadi pemacu saya, dan mereka untuk memutkinkan al qur'an.
