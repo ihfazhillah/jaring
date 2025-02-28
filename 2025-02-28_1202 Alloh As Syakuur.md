@@ -9,4 +9,10 @@ Perhatikan ayat berikut
 
 إن تقرضوا الله قرضا حسنا يضاعفه لكم و يغفر لكم و الله شكور حليم
 
-Kalau kalian meminjamkan kepada Alloh dengan pinjaman yang baik, maka Alloh akan lipat gandakan hal tersebut dan Alloh berikan ampun untuk kalian
+Kalau kalian meminjamkan kepada Alloh dengan pinjaman yang baik, maka Alloh akan lipat gandakan hal tersebut dan Alloh berikan ampun untuk kalian. Dan Alloh Maha mensyukuri dan Maha penyantun.
+
+Perhatikan:
+1. Alloh menyandarkan dan mengakui amalan hambanya yang beramal.
+2. Alloh memberi imbalan
+3. Bahkan Alloh lipat gandakan imbalan tersebut dan bonus lainnya berupa ampunan.
+
