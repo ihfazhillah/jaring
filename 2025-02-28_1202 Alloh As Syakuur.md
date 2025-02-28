@@ -16,3 +16,4 @@ Perhatikan:
 2. Alloh memberi imbalan
 3. Bahkan Alloh lipat gandakan imbalan tersebut dan bonus lainnya berupa ampunan.
 
+Perhatikan ayat ayat yang Alloh menyebutkan diriNya adalah As Syakuur, Alloh sebutkan beberapa atsar dan efek dari sifat tersebut. 
