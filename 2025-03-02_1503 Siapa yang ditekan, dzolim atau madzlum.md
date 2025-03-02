@@ -4,4 +4,4 @@ Syareat juga tak lupa dengan syareat membalas kedzoliman orang lain dengan syara
 
 Bahkan syareat mengarahkan bahwa ada batasan bolehnya mengalah atas kedzoliman orang lain ketika yang dzolim adalah orang kafir.
 
-ولتسمعن من الذين أ وإن تصبروا و تتقوا فإن ذلك من عزم الأمور
+ولتسمعن من الذين أوتوا  وإن تصبروا و تتقوا فإن ذلك من عزم الأمور
