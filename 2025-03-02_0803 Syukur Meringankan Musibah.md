@@ -7,7 +7,8 @@ Alloh *sempilkan* pembahasan kemenangan perang badr di awal awal pembahasan pera
 
 
 Disaat menyebutkan pertolongan Alloh di perang badr, Alloh berfirman:
-واتقوا الله لعلكم تشكرون
+
+فاتقوا الله لعلكم تشكرون
 
 Dan bertakwalah kalian kepada Alloh agar kalian semua bersyukur.
 
