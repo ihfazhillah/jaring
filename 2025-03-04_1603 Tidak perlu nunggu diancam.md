@@ -16,3 +16,4 @@ Seorang muslim mukmin tidak perlu sampai diancam untuk bisa mentaati Robbnya. Me
 
 Sifat nunggu ada ancaman dahulu baru bisa taat adalah diantara sifat orang orang yahudi. Rosululloh mewanti wanti kita untuk menyelisihi mereka. Coba refleksi diri kita sejauh mana kita siap untuk menerima dan mengamalkan firman firman Alloh.
 
+Belum lagi ketika kita lanjutkan ayat ini. Semoga Alloh selamatkan dari sifat ini.
