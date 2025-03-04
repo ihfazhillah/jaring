@@ -14,4 +14,5 @@ Ada beberapa point keadaan bani israel di ayat ini:
 
 Seorang muslim mukmin tidak perlu sampai diancam untuk bisa mentaati Robbnya. Mendengar perintah, dia akan bersegera untuk mengamalkannya. Mendengar larangan, dia akan menjauhi hal hal yang dilarang tersebut sejauh jauhnya.
 
-Sifat nunggu ada ancaman dahulu baru bisa taat adalah diantara sifat orang orang yahudi. Rosululloh mewanti wanti kita untuk menyelisihi mereka. Coba refleksi diri kita sejauh mana kita siap untuk menerima firman firman Alloh.
+Sifat nunggu ada ancaman dahulu baru bisa taat adalah diantara sifat orang orang yahudi. Rosululloh mewanti wanti kita untuk menyelisihi mereka. Coba refleksi diri kita sejauh mana kita siap untuk menerima dan mengamalkan firman firman Alloh.
+
