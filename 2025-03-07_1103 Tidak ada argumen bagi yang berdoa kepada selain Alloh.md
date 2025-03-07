@@ -1,0 +1,4 @@
+1. Apakah selain Alloh ini memiliki bagian kepemilikan secara utuh di bumi maupun di langit, ataukah itu semua mutlak milik Alloh?
+2. Atau kalau tidak, apakah mereka bersekutu bersama Alloh untuk menciptakan langit dan bumi. Atau mengatur keduanya? Atau menjaga keduanya? 
+3. Atau kalau tidak, apakah mereka ini adalah pembantu pembantu Alloh di bumi untuk menciptakan, mengatur, menjaga alam semesta ini? Dan Alloh membutuhkan bantuan mereka?
+4. Atau kalau tidak, apakah mereka dapat memberikan syafa'at atau jadi penolong begitu saja dihadapan Alloh tanpa harus ada ijin dan ridho dari Alloh? Atau syafaat itu murni milik Alloh, Alloh pilih dari kalangan hambanya dsri yang Alloh kehendaki?
