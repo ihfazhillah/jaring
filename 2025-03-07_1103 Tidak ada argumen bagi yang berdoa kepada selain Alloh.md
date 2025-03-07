@@ -2,4 +2,6 @@
 2. Atau kalau tidak, apakah mereka bersekutu bersama Alloh untuk menciptakan langit dan bumi. Atau mengatur keduanya? Atau menjaga keduanya? 
 3. Atau kalau tidak, apakah mereka ini adalah pembantu pembantu Alloh di bumi untuk menciptakan, mengatur, menjaga alam semesta ini? Dan Alloh membutuhkan bantuan mereka?
 4. Atau kalau tidak, apakah mereka dapat memberikan syafa'at atau jadi penolong begitu saja dihadapan Alloh tanpa harus ada ijin dan ridho dari Alloh? Atau syafaat itu murni milik Alloh, Alloh pilih dari kalangan hambanya dsri yang Alloh kehendaki?
-5. Ataukah mereka dapet stempel dari Alloh bahwa mereka itu adalah tempat yang berhak untuk dijadikan sesembahan. Yang berhak untuk dijadikan tempat untuk berdoa sehingga dipanggil panggil, wahai mbah fulan, sembuhkan anakku. Naikkan pangkatku. Lariskan daganganku. Sehingga kamu punya "piagam dan izin"
+5. Ataukah mereka dapet stempel dari Alloh bahwa mereka itu adalah tempat yang berhak untuk dijadikan sesembahan. Yang berhak untuk dijadikan tempat untuk berdoa sehingga dipanggil panggil, wahai mbah fulan, sembuhkan anakku. Naikkan pangkatku. Lariskan daganganku. Sehingga kamu punya "piagam dan izin" untik mrnyembah mereka?
+
+Kalau tidak ada, apa argumen yang bisa dipertanggungjawabkan dengan perbuatan perbuatan ini. Padahal kita semua yakin Alloh akan tanyai semua perbuatan kita dan minta pertanggung jawabannya nanti?!
