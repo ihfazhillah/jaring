@@ -20,4 +20,12 @@ Sehingga keadaannya ketika ada syareat islam dihadapannya, dia tidak mau tahu ke
 
 Kedua, karena bagi dia susah, akhirnya dia meninggalkannya. Menutup telinganya agar tidak mendengarnya. Memalingkan hati dari mempelajari islam. Bahkan memalingkan orang lain darinya. Menyatakan islam adalah bar bar. Dan menutup diri dari mempelajari hikmah hikmah dibalik syareat baik yang terlihat seram meskipun banyak kelembutan di baliknya. Atau yanh memang benar benar lembut asalnya.
 
-Yang mau di terima adalah yang benar benar *Tok melong* dengan berbagai bukti yang 
+Yang mau di terima adalah yang benar benar *Tok melong* dengan berbagai bukti yang nampak oleh panca indra. Itu kalau masih mau menerima. Tapi masalah masalah yang masih tidak nampak bagi sebagian orang, dia tidak mau menerima. Apalagi soal pembalasan dan kebangkitan setiap hamba kelak di hari kebangkitan.
+
+Mari berkaca, di manakah letak hati kita terhadap syareat syareat islam yang ada. 
+
+Terhadap syareat memurnikan ibadah hanya ditujukan kepada Alloh dan ancaman ancaman bagi yang meninggalkannya.
+
+Terhadap syareat sholat dan ancaman bagi yang meninggalkannya. Zakat, puasa, haji, jihad, amar makruf nahi mungkar. Dan banyak hal lain.
+
+Di manakah hati kita? Kalau masih ada rasa berat, kita masih hidup dan diberi kesempatan. Mari perbaiki dan latih. Semoga Alloh berikan taufiq.
