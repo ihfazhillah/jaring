@@ -1,0 +1,1 @@
+Alloh permisalkan keadaan orang munafiq di permisalan kedua di awal awal Al Baqoroh 
