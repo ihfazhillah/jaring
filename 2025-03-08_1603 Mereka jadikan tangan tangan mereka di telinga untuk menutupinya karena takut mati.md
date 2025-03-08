@@ -20,4 +20,4 @@ Sehingga keadaannya ketika ada syareat islam dihadapannya, dia tidak mau tahu ke
 
 Kedua, karena bagi dia susah, akhirnya dia meninggalkannya. Menutup telinganya agar tidak mendengarnya. Memalingkan hati dari mempelajari islam. Bahkan memalingkan orang lain darinya. Menyatakan islam adalah bar bar. Dan menutup diri dari mempelajari hikmah hikmah dibalik syareat baik yang terlihat seram meskipun banyak kelembutan di baliknya. Atau yanh memang benar benar lembut asalnya.
 
-Yang mau di terima adalah yang benar benar 
+Yang mau di terima adalah yang benar benar *Tok melong* dengan berbagai bukti yang 
