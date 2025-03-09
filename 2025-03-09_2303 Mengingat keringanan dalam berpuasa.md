@@ -1,1 +1,1 @@
-Dahulu, 
+Dahulu di awal syareat 
