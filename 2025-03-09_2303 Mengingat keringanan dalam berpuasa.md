@@ -1,1 +1,1 @@
-Dahulu di awal syareat 
+Dahulu di awal syareat puasa, 
