@@ -1,1 +1,1 @@
-Dahulu di awal syareat puasa, 
+Dahulu di awal syareat puasa, setelah buka, dan kemudian tertidur, 
