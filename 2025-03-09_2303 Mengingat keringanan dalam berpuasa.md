@@ -4,4 +4,6 @@ Artinya jarak berbuka waktu itu adalah antara terbenam matahari sampai tidurnya 
 
 Kemudian Alloh permudah, dengan beri jarak waktu untuk buka dari terbenam matahari sampai terbit fajar.
 
-Diawal 
+Diawal syareat, Alloh ingin menguji hambaNya siapa siapa yang menerima syareat ini dan baik. Menguji seberapa besar iman seorang dengan syareat ini.
+
+Pada akhirnya Alloh mudahkan syareat yang mulia ini. Yang sampai saat ini dan sampai akhir dunia ini kaum muslimin rasakan.
