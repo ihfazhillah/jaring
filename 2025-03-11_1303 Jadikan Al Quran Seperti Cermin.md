@@ -7,4 +7,4 @@ Begitu juga Al Quran, mana bagian dari perbuatan kita yang masih salah, maka kit
 
 Cermin juga digunakan untuk melihat keindahan rupa yang Alloh berikan kepada hambaNya, sehingga dia memujiNya dan mensyukuri kenikmatan tersebut. 
 
-Begitu juga Al Qur'an, dia jadikan Al Qur'an untuk melihat amalan amalan mana, perangai mana, ucapan mana yang sudah sesuai pedoman yang berbarokah ini, sehingga kita menyukuri Dzat yang telah memberikan taufiq dan meminta agar diberikan kekokohan hingga kematian menjemput.
+Begitu juga Al Qur'an, dia jadikan Al Qur'an untuk melihat amalan amalan mana, perangai mana, ucapan mana yang sudah sesuai pedoman yang berbarokah ini, sehingga kita menyukuri Dzat yang telah memberikan taufiq dan meminta agar diberikan kekokohan hingga kematian menjemput. 
