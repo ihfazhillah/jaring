@@ -16,3 +16,4 @@ Wajar bagi seorang yang dizholimi masih teringat dan memendam sedih dan marah. B
 
 Dan kedua mata Ya'qub memutih karena rasa sedih. Dan beliau *ngempet* marah dan efek efek kemarahan yang dilarang oleh Alloh.
 
+Madzlum mengungkit kesalahan yamg dzolim adalah perbuatan wajar, tidak dilarang, dan manusiawi. Terlebih ketika efek sama sekali tidak hilang. Lalu bagaimana ketika efeknya semakin parah?
