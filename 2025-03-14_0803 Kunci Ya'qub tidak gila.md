@@ -8,5 +8,6 @@ Alloh berfirman tentang beliau:
 قال إنما أشكو بثي و حزني إلى الله و أعلم من الله مالا تعلمون
 Beliau berkata, sunggu aku hanya mengadukan kesusahan dan kesedihanku kepada Alloh. Dan aku mengetahui perkara yang tidak kalian ketahui.
 
-Perhatikan
-1. Beliau mengadukan. Bahasa kita curhat. Tidak beliau pendam sendiri
+Perhatikan!
+
+Beliau mengadukan. Bahasa kita curhat. Tidak beliau pendam sendiri
