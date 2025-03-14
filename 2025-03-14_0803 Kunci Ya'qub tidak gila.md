@@ -10,4 +10,18 @@ Beliau berkata, sunggu aku hanya mengadukan kesusahan dan kesedihanku kepada All
 
 Perhatikan!
 
-Beliau mengadukan. Bahasa kita curhat. Tidak beliau pendam sendiri. Beliau curahkan segala rasa sedih dan kesuahan yang dihadapi karena musibah ini
+Beliau mengadukan. Bahasa kita curhat. Tidak beliau pendam sendiri. Beliau curahkan segala rasa sedih dan kesusahan yang dihadapi karena musibah ini kepada selain dirinya.
+
+Tujuan curhat ini antara lain adalah menaruh beban supaya tidak berat di hati dia. Dan dia bisa mendapatkan solusi. Mendapatkan bantuan. Paling tidak, kepalanya plong. Tapi, perlu diperhatikan. Cari orang yang tidak *ember* dalam masalah ini. Bukan jadi solusi, tapi api permasalahan semakin membara dan menyebar.
+
+Nabi Ya'qub memberikan contoh bahwa sebaik baik tempat mengadu adalah Alloh. Dan beliau hanya mengadu kepada Alloh. Ucapan beliau tidak hanya ucapan, namun juga praktek yang beliau lakukan. 
+
+Point kedua adalah berperasangka baik kepada Alloh, bahwa Alloh akan menyelesaikan masalah ini. Berperasangka baik bahwa Alloh akan membalas kedzoliman seorang. Disadari atau tidak disadari olehnya. Bereperasangka baik bahwa ini adalah pelajaran hidup yang Alloh berikan kepada dia untuk menjadi lebih baik dan lebih mulia di dunia sebelum di akherat. Berperasangka baik bahwa Alloh akan membuka siapa yang salah dan siapa yang benar. Bila ada kesalahan di madzlum, Alloh akan bimbing dia untuk bertaubat dan mengakui kesalahan tersebut. Berperasangka baik dengan segala macamnya.
+
+Alloh berfirman ttg ya'qub
+
+يابني اذهبوا فتحسسوا من يوسف و أخيه
+
+Wahai anak anakku, pergi sana, cari Yusuf dan Saudaranya.
+
+Bahkan beliau sampai berperasangka baik kepada Alloh bahwa Alloh akan mengumpulkan mereka semua. Ya Binyamin yang baru saja terpisah, dan yusuf yang sudah bertahun tahun lamanya tidak diketahui kabarnya.
