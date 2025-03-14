@@ -1,1 +1,1 @@
-Lanjutan pembahasan [[2025-03-13_0903_Duhai,_Alangkah_sedihnya_aku_karena_Yusuf_5.png]], 
+Lanjutan pembahasan [[2025-03-13_0903 Duhai, Alangkah sedihnya aku karena Yusuf]]
