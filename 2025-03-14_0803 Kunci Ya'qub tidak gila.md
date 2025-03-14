@@ -26,4 +26,6 @@ Wahai anak anakku, pergi sana, cari Yusuf dan Saudaranya.
 
 Bahkan beliau sampai berperasangka baik kepada Alloh bahwa Alloh akan mengumpulkan mereka semua. Ya Binyamin yang baru saja terpisah, dan yusuf yang sudah bertahun tahun lamanya tidak diketahui kabarnya.
 
-ولا تيأسوا من روح الله إنه لا ييأس من روح الله 
+ولا تيأسوا من روح الله إنه لا ييأس من روح الله إلا القوم الكافرون
+
+Dan jgnlah kalian berputus asa dari rahnat Alloh. Sunggug, tid
