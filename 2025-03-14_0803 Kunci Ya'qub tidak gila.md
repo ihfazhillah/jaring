@@ -10,4 +10,4 @@ Beliau berkata, sunggu aku hanya mengadukan kesusahan dan kesedihanku kepada All
 
 Perhatikan!
 
-Beliau mengadukan. Bahasa kita curhat. Tidak beliau pendam sendiri
+Beliau mengadukan. Bahasa kita curhat. Tidak beliau pendam sendiri. Beliau curahkan segala rasa sedih dan kesuahan yang dihadapi karena musibah ini
