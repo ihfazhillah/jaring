@@ -28,4 +28,8 @@ Bahkan beliau sampai berperasangka baik kepada Alloh bahwa Alloh akan mengumpulk
 
 ولا تيأسوا من روح الله إنه لا ييأس من روح الله إلا القوم الكافرون
 
-Dan jgnlah kalian berputus asa dari rahnat Alloh. Sunggug, tid
+Dan jgnlah kalian berputus asa dari rahnat Alloh. Sungguh, tidak ada yang berputus asa dari rahmat Alloh kecuali orang orang yang kufur.
+
+Kafir ni'mat Alloh, apa lagi kafir terhadap syareat Alloh.
+
+Wahai orang yang dilanda sedih, dan didzolimi gunakan dua senjata ini untuk *survive* menghadapi kehidupan ini. **1. Curhatkan masalahmu** kepada orang lain yang amanah, jangan lupa curhatkan kepada Alloh. Adukan kepada Alloh. **2. Tetap khusnudzon kepada Alloh** atas segalanya. Jaga itu. Arungi hari hari untum mendapatkan lebih rahmat dari Alloh dan jangan putus asa darinya.
