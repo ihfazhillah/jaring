@@ -5,4 +5,4 @@ Ada dua hal yang Alloh kisahkan tentang beliau:
 2. Berperasangka baik dan tidak putus asa dari rahmat Alloh
 
 Alloh berfirman tentang beliau:
-إ
+قال إنما أشكو بثي و حزني إلى الله و أعلم من الله مالا تعلمون
