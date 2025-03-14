@@ -25,3 +25,5 @@ Alloh berfirman ttg ya'qub
 Wahai anak anakku, pergi sana, cari Yusuf dan Saudaranya.
 
 Bahkan beliau sampai berperasangka baik kepada Alloh bahwa Alloh akan mengumpulkan mereka semua. Ya Binyamin yang baru saja terpisah, dan yusuf yang sudah bertahun tahun lamanya tidak diketahui kabarnya.
+
+ولا تيأسوا من 
