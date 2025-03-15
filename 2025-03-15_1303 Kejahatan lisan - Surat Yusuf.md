@@ -6,4 +6,4 @@ Padahal bisa jadi perasaan itu disebabkan Yusuf lebih kecil umurnya di masa itu 
 
 Intinya mereka menuruti perasaan itu. Menginkan kenikmatan itu hilang dari yusuf. Dan dengan perkiraan mereka, kalau yusuf tersingkir mereka akan menjadi lebih dekat dengan ayah mereka.
 
-**2. Dusta dengan bukti palsu**
+**2. Dusta dengan bukti palsu.** Ketika 
