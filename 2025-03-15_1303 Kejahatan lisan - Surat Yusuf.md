@@ -16,7 +16,7 @@ Point ini menyeret ke point selanjutnya. Dosa menarik ke dosa yang lain.
 
 **4. Membuat hoaks dan menyebarkannya.** point ini sebelum point 3, yaitu ketika al aziz ada di depan pintu maka istrinya menuduh bahwa yang kurangajar adalah yusuf. Dan juga berkaitan dengan setelah point ke 3, yaitu di ucapan
 
-لإن لم يفعل ما آمره ليسجنن و يكونا من الصاغرين
+لإن لم يفعل ما آمره ليسجنن و ليكونا من الصاغرين
 
 Kalau yusuf tidak melakukan apa yang aku perintahkan, dia akan masuk penjara dan benar benar jadi orang rendahan.
 
