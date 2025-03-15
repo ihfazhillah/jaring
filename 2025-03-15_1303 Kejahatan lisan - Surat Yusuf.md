@@ -20,7 +20,7 @@ Point ini menyeret ke point selanjutnya. Dosa menarik ke dosa yang lain.
 
 Kalau yusuf tidak melakukan apa yang aku perintahkan, dia akan masuk penjara dan benar benar jadi orang rendahan.
 
-**5. Menuduh tanpa bukti dan menyakiti hati** ini terjadi saat binyamin tertuduh mencuri dan sebelum kejadian [[2025-03-13_0903 Duhai, Alangkah sedihnya aku karena Yusuf|Tuduhan bahwa binyamin mencuri.]]
+**5. Menuduh tanpa bukti dan menyakiti hati** ini terjadi saat binyamin tertuduh mencuri dan sebelum kejadian [[2025-03-13_0903 Duhai, Alangkah sedihnya aku karena Yusuf.]]
 
 ---
 Kejahatan lisan tidak mudah penyelesaiannya. Butuh kesadaran yang luar biasa dari pelakunya untuk bisa terlepas dari kedzoliman ini. Dia harus melawan banyak faktor akibat ucapannya. 
