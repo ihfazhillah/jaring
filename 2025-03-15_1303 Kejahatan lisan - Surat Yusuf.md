@@ -20,4 +20,4 @@ Point ini menyeret ke point selanjutnya. Dosa menarik ke dosa yang lain.
 
 Kalau yusuf tidak melakukan apa yang aku perintahkan, dia akan masuk penjara dan benar benar jadi oranh rendahan.
 
-**5. Menuduh tanpa bukti**
+**5. Menuduh tanpa bukti dan menyakiti hati**
