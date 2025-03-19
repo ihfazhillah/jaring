@@ -4,3 +4,4 @@ Setelah Yusuf kecil menceritakan perihal mimpinya, sang ayah pun berkata:
 
 
 Wahai anakku, jangan kamu ceritakan mimpimu ini kepada saudara saudaramu, nanti mereka berbuat tipu daya terhadapmu
+
