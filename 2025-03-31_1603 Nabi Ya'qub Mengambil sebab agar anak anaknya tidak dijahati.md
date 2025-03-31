@@ -1,4 +1,4 @@
-Dalam kisah ke mesir terakhir, saat para saudara yusuf akan membawa Binyamin, ayah mereka berpesan:
+Dalam kisah ke Mesir terakhir, saat para saudara Yusuf akan membawa Binyamin, ayah mereka berpesan:
 
 Jangan kalian semuanya masuk dari satu pintu. Tapi masuklah dari beberapa pintu yang berbeda beda.
 
