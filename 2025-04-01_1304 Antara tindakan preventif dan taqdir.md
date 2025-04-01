@@ -8,3 +8,4 @@ Sebagaimanapun Ya'qub menjaga yusuf dari kedzoliman saudara saudaranya, namun Al
 
 Sebagaimanapun beliau menyarankan tindakan preventif dan sudah dilakukan oleh kakak kakak yusuf, namun binyamin tetaplah pergi meninggalkan ya'qub.
 
+Kewajiban seorang hamba adalah melakukan sebab sebab preventif. Alloh maha bijak atas segala kehendaknya.
