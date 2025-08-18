@@ -26,6 +26,7 @@
         {% endfor %}
     </div>
 
+    {% if total_pages > 1 %}
     <div class="pagination">
         {% if current_page > 1 %}
             <a href="{% if current_page == 2 %}index.html{% else %}page-{{ current_page - 1 }}.html{% endif %}">Previous</a>
@@ -40,4 +41,5 @@
             <a href="page-{{ current_page + 1 }}.html">Next</a>
         {% endif %}
     </div>
+    {% endif %}
 {% endblock %}
