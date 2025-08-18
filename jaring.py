@@ -1,4 +1,5 @@
 import frontmatter
+import argparse
 import jinja2
 import markdown
 import yaml
@@ -155,9 +156,28 @@ def save_html(file_path, html):
 
 def main():
     """Main function to generate the static site."""
+    # Setup argument parser
+    parser = argparse.ArgumentParser(description="Generate a static site from markdown files.")
+    parser.add_argument(
+        "--config",
+        "-c",
+        type=str,
+        default="config.yaml",
+        help="Path to the custom configuration file (default: config.yaml)"
+    )
+    args = parser.parse_args()
+    config_path = args.config
+
     # Load configuration
-    with open("config.yaml", "r") as f:
-        config = yaml.safe_load(f)
+    try:
+        with open(config_path, "r") as f:
+            config = yaml.safe_load(f)
+    except FileNotFoundError:
+        print(f"Error: Configuration file not found at '{config_path}'.")
+        exit(1)
+    except yaml.YAMLError as e:
+        print(f"Error parsing configuration file '{config_path}': {e}")
+        exit(1)
 
     content_path = config["content_path"]
     template_path = config["template_path"]
