@@ -4,14 +4,27 @@
 
 {% block content %}
     <h2>All Messages</h2>
-    <ul class="message-list">
+    <div class="message-list">
         {% for post in posts %}
-            <li>
+            <div class="card">
                 <h3><a href="messages/{{ post.metadata.id }}.html">{{ post.metadata.title }}</a></h3>
-                <div>{{ post.html | safe }}</div>
-            </li>
+                <div class="metadata">
+                    <span>Date: {{ post.date }}</span>
+                    {% if post.metadata.tags %}
+                        <span class="tags">
+                            | Tags:
+                            {% for tag in post.metadata.tags %}
+                                <a href="tags/{{ tag }}.html">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+                            {% endfor %}
+                        </span>
+                    {% endif %}
+                </div>
+                <div class="content-wrapper">
+                    {{ post.html | safe }}
+                </div>
+            </div>
         {% endfor %}
-    </ul>
+    </div>
 
     <div class="pagination">
         {% if current_page > 1 %}

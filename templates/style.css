@@ -3,10 +3,81 @@ body {
     font-family: sans-serif;
     line-height: 1.6;
     margin: 0;
-    padding: 0;
-    background: #f4f4f4;
+    padding: 20px;
+    background-color: #f4f4f4;
     color: #333;
 }
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+header h1 a {
+    color: #333;
+    text-decoration: none;
+}
+
+.message-list {
+    list-style: none;
+    padding: 0;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.content-wrapper {
+    max-width: 76ch;
+}
+
+.metadata {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 1em;
+}
+
+.metadata .tags a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.caption {
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: 1px solid #eee;
+    color: #555;
+    font-style: italic;
+}
+
+.quote-content {
+    border-left: 4px solid #ccc;
+    padding-left: 1em;
+    margin-left: 0;
+}
+
+.pagination {
+    margin-top: 20px;
+}
+
+.pagination a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.pagination a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 
 .container {
     width: 80%;
