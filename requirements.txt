@@ -1,0 +1,5 @@
+Jinja2
+Markdown
+python-frontmatter
+PyYAML
+pictex

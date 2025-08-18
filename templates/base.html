@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{ site_name }}{% endblock %}</title>
+    {% if post and post.metadata.og_image %}
+    <meta property="og:image" content="{{ '../' * depth }}{{ post.metadata.og_image }}">
+    {% endif %}
+    <link rel="stylesheet" href="{{ '../' * depth }}assets/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><a href="{{ '../' * depth }}index.html">{{ site_name }}</a></h1>
+        </header>
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+        <footer>
+            <p>{{ footer_text }}</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,139 @@
+JARING - SPECIFICATION
+Version: 1.0
+Author: Muhammad Ihfazhillah
+Date: 2025-08-14
+
+=================================================
+1. PURPOSE
+-------------------------------------------------
+Jaring is a simple text-to-static-site converter.
+It takes one-message-per-file in Markdown format,
+parses it, and generates static HTML pages using Jinja templates.
+
+Primary goal:
+- Allow creation of short, child-friendly messages (starting with the "Nak" series).
+- Messages should be easy to read directly as text or as a generated website.
+- Extendable for other message series in the future.
+
+=================================================
+2. FILE STRUCTURE
+-------------------------------------------------
+- Each message is stored as ONE file.
+- File format: Markdown with YAML-like frontmatter.
+- File naming convention:
+  [YYYY]-[MM]-[DD]-[series-id].md
+  where:
+    YYYY-MM-DD = Hijri date (converted to Gregorian internally if needed)
+    series-id  = short identifier (e.g., nak, sahabat, etc.)
+
+Example:
+  1447-01-01-nak.md
+  1447-01-02-nak.md
+
+=================================================
+3. FILE FORMAT
+-------------------------------------------------
+Each file MUST follow this format:
+
+---
+id: <unique-id>
+title: <short title>
+series: <series-id>
+preview: <optional preview text or preview key>
+---
+
+<message body>
+
+Rules:
+- `id` is a unique string (recommended: hijri-date + series)
+- `title` is a short headline for the message
+- `series` identifies which group the message belongs to (e.g., "nak")
+- `preview` (optional) can be a short text or symbolic notation that will later be converted into an image or used for preview cards.
+- Body is plain Markdown content.
+- Messages should be short (1–5 sentences) for readability.
+
+Example:
+---
+id: 1447-01-01-nak
+title: Bangunkan Saudaramu
+series: nak
+preview: 🌱
+---
+
+Nak, kalau ada saudaramu atau temanmu yang sedang jatuh—entah jatuh karena salah, atau jatuh karena lemah—jangan ikut menjauhkan. Jangan juga ikut menertawakan.
+Bangunkan dia dengan kata yang lembut. Ingatkan dia tentang nikmat dan kebaikan Allah. Bantu dia bangkit lagi.
+
+=================================================
+4. PARSER BEHAVIOR
+-------------------------------------------------
+Input:
+- Folder path containing markdown files.
+
+Steps:
+1. Read all `.md` files.
+2. Extract frontmatter and body.
+3. Validate required fields (`id`, `title`, `series`).
+4. Store as an internal data structure (list of messages).
+
+Output:
+- Pass parsed data to Jinja templates for HTML generation.
+- Generate:
+  a. Per-message HTML page.
+  b. Index page (list of all messages per series).
+  c. Optional RSS/JSON feed.
+
+=================================================
+5. JINJA TEMPLATE STRUCTURE
+-------------------------------------------------
+/templates
+  base.html
+  index.html
+  message.html
+  feed.xml (optional)
+
+base.html:
+- Common layout (header, footer, CSS link)
+- Child templates extend this.
+
+index.html:
+- Shows list of messages in a series.
+- Each message: title, date, preview image/text.
+
+message.html:
+- Displays single message.
+- Title, date, preview image (if available), body text.
+
+=================================================
+6. OUTPUT STRUCTURE
+-------------------------------------------------
+/output
+  index.html
+  /series-id
+    index.html
+    /messages
+      [id].html
+  /assets
+    /images (generated previews)
+    style.css
+
+=================================================
+7. PREVIEW IMAGE HANDLING
+-------------------------------------------------
+If `preview` field exists:
+- If it's an emoji/text, keep as text for direct display.
+- Optionally convert into an image (server-side generation).
+- Used in:
+  - Index page thumbnail
+  - Message header
+
+=================================================
+8. FUTURE EXTENSIONS
+-------------------------------------------------
+- Add tagging and search.
+- Multi-language support.
+- Date conversion (Hijri ↔ Gregorian).
+- Offline-first PWA version.
+
+=================================================
+END OF SPEC
+

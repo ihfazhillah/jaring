@@ -1,0 +1,5 @@
+site_name: "Jaring"
+footer_text: "Generated with Jaring"
+content_path: "examples"
+template_path: "templates"
+output_path: "output"

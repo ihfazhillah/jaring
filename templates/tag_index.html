@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Messages by Tag: {{ tag }}{% endblock %}
+
+{% block content %}
+    <h2>Messages Tagged: {{ tag }}</h2>
+    <ul class="message-list">
+        {% for post in posts %}
+            <li>
+                <a href="../messages/{{ post.metadata.id }}.html">
+                    {{ post.metadata.title }}
+                </a>
+                <span>{{ post.metadata.preview }}</span>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
