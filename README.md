@@ -80,8 +80,9 @@ Each file must begin with YAML frontmatter:
 
 ```yaml
 ---
-id: 1447-02-03-new-post
+id: 1447-02-04-new-post
 title: My New Post
+type: quote # Optional: e.g., quote, message. Defaults to 'message'.
 tags:
   - python
   - static-site
@@ -90,7 +91,22 @@ tags:
 
 *   `id`: A unique identifier for the post. The date-based format `YYYY-MM-DD-slug` is recommended for sorting.
 *   `title`: The title of the post.
+*   `type`: (Optional) The content type. This will determine which template is used to render the post (e.g., `type_quote.html`). If omitted, it defaults to `message`.
 *   `tags`: A list of tags for the post.
+
+### Captions and Explanations (Syarah)
+
+To add a caption, explanation, or "syarah" to your main content, simply add a horizontal rule (`---`) to separate the main body from the caption. This works for any content type.
+
+**Example:**
+
+```markdown
+This is the main content. It will be rendered normally.
+
+---
+
+This text is the caption or explanation. It will be displayed in a separate "syarah" section.
+```
 
 ### Text-to-Image
 
