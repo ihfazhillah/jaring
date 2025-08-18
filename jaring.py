@@ -105,9 +105,19 @@ def parse_file(file_path):
 
         generated_images = [] # To store paths of generated images
 
+        # Handle content and caption separation
+        parts = post.content.split('---', 1)
+        main_content = parts[0]
+        caption_content = parts[1] if len(parts) > 1 else None
+
         # Use FSM to parse notations and get modified content and extracted texts
-        modified_content, extracted_image_texts = parse_img_notations_fsm(post.content)
+        modified_content, extracted_image_texts = parse_img_notations_fsm(main_content)
         post.content = modified_content # Update post.content with the FSM's output
+
+        if caption_content:
+            post.caption = convert_markdown_to_html(caption_content.strip())
+        else:
+            post.caption = None
 
         for i, og_image_text in enumerate(extracted_image_texts):
             generated_image_path = generate_image_from_text(og_image_text, post.metadata['id'], i)
@@ -122,6 +132,7 @@ def parse_file(file_path):
         return {
             "metadata": post.metadata,
             "content": post.content,
+            "caption": post.caption,
             "path": file_path,
             "date": date,
             # "og_image_text": og_image_text, # This is no longer needed in the return dict
@@ -194,7 +205,19 @@ def main():
 
         # Temporarily add post to globals for base.html
         template_env.globals['post'] = post
-        html = render_html(template_env, "message.html", {"post": post, "depth": 1})
+
+        # Get content type, default to 'message' if not specified
+        content_type = post["metadata"].get("type", "message")
+        template_name = f"type_{content_type}.html"
+
+        try:
+            # Try to get the specific template
+            template_to_render = template_env.get_template(template_name)
+        except jinja2.exceptions.TemplateNotFound:
+            # Fallback to the default message.html
+            template_to_render = template_env.get_template("message.html")
+
+        html = template_to_render.render({"post": post, "depth": 1})
         del template_env.globals['post'] # Clean up
         save_html(post_output_path, html)
 

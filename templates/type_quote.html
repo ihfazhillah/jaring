@@ -6,9 +6,6 @@
     <p><a href="../index.html">&larr; Kembali ke Daftar Pesan</a></p>
     <article class="message">
         <h2>{{ post.metadata.title }}</h2>
-        {% if post.metadata.og_image %}
-        <img src="{{ '../' * depth }}{{ post.metadata.og_image }}" alt="{{ post.metadata.title }}" class="og-image">
-        {% endif %}
         <div class="metadata">
             <span>Date: {{ post.date }}</span>
             {% if post.metadata.tags %}
@@ -21,7 +18,9 @@
             {% endif %}
         </div>
         <div class="content">
-            {{ post.html | safe }}
+            <blockquote class="quote-content">
+                {{ post.html | safe }}
+            </blockquote>
         </div>
         {% if post.caption %}
         <div class="caption">
