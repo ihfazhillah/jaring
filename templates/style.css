@@ -1,40 +1,30 @@
 body {
-    font-family: sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: #fff;
     color: #333;
 }
 
 .container {
     max-width: 800px;
     margin: 0 auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 header {
     padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
 }
 
 header h1 a {
     color: #333;
     text-decoration: none;
+    font-size: 24px;
 }
 
 main {
-    padding: 0;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px;
-    color: #666;
-    font-size: 0.9em;
+    padding-top: 20px;
 }
 
 .message-list {
@@ -43,10 +33,15 @@ footer {
 }
 
 .card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid #eee;
+    padding: 20px 0;
+    margin-bottom: 0;
+}
+
+.card h3 a {
+    text-decoration: none;
+    color: #333;
 }
 
 .content-wrapper {
@@ -54,14 +49,31 @@ footer {
 }
 
 .metadata {
-    color: #666;
-    font-size: 0.9em;
+    color: #888;
+    font-size: 14px;
     margin-bottom: 1em;
+}
+
+.metadata .tags {
+    margin-left: 10px;
 }
 
 .metadata .tags a {
     color: #007bff;
     text-decoration: none;
+    background-color: #f0f0f0;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.tag-card {
+    background-color: #f8f8f8;
+    border: 1px solid #eee;
+    padding: 20px;
 }
 
 .caption {
@@ -72,6 +84,21 @@ footer {
     font-style: italic;
 }
 
+.pagination button {
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.pagination button:hover {
+    background-color: #0056b3;
+}
+
 .quote-content {
     border-left: 4px solid #ccc;
     padding-left: 1em;
@@ -79,10 +106,10 @@ footer {
 }
 
 .pagination {
-    margin-top: 20px;
+    margin-top: 40px;
     text-align: center;
-    background-color: #f0f0f0;
-    padding: 10px;
+    background-color: #f8f8f8;
+    padding: 15px;
     border-radius: 8px;
 }
 
@@ -97,17 +124,86 @@ footer {
     text-decoration: underline;
 }
 
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    color: #aaa;
+    font-size: 14px;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     body {
         padding: 10px;
     }
+}
 
-    .container {
-        padding: 15px;
-    }
+/* Image and Lightbox Styles */
+.content-wrapper img {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+    display: block;
+    margin: 1em 0;
+}
 
-    .card {
-        padding: 15px;
-    }
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Callout Styles */
+.callout {
+    padding: 1em;
+    border-left: 5px solid #ccc;
+    margin: 1em 0;
+}
+
+.callout.note {
+    background-color: #f0f7fd;
+    border-left-color: #4a90e2;
+}
+
+.callout.info {
+    background-color: #eef7f0;
+    border-left-color: #50e3c2;
+}
+
+.callout.warning {
+    background-color: #fffbe6;
+    border-left-color: #f5a623;
+}
+
+.callout.error {
+    background-color: #fbe6e6;
+    border-left-color: #d0021b;
+}
+
+.callout.quote {
+    background-color: #f9f9f9;
+    border-left-color: #999;
 }

@@ -1,0 +1,18 @@
+{% for post in posts %}
+<div class="card">
+    <h3><a href="messages/{{ post.metadata.id }}.html">{{ post.metadata.title }}</a></h3>
+    <div class="metadata">
+        <span>{{ post.date }}</span>
+        {% if post.metadata.tags %}
+            <span class="tags">
+                {% for tag in post.metadata.tags %}
+                    <a href="tags/{{ tag }}.html">{{ tag }}</a>
+                {% endfor %}
+            </span>
+        {% endif %}
+    </div>
+    <div class="content-wrapper">
+        {{ post.html | safe }}
+    </div>
+</div>
+{% endfor %}

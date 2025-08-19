@@ -1,20 +1,29 @@
 {% extends "base.html" %}
 
-{% block title %}Messages{% endblock %}
+{% block title %}{{ site_name }}{% endblock %}
 
 {% block content %}
-    <h2>All Messages</h2>
+    <div class="card tag-card">
+        <h3>Tags</h3>
+        <div class="metadata">
+            <div class="tags">
+                {% for tag in tags %}
+                    <a href="tags/{{ tag }}.html">{{ tag }}</a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
     <div class="message-list">
         {% for post in posts %}
             <div class="card">
                 <h3><a href="messages/{{ post.metadata.id }}.html">{{ post.metadata.title }}</a></h3>
                 <div class="metadata">
-                    <span>Date: {{ post.date }}</span>
+                    <span>{{ post.date }}</span>
                     {% if post.metadata.tags %}
                         <span class="tags">
-                            | Tags:
                             {% for tag in post.metadata.tags %}
-                                <a href="tags/{{ tag }}.html">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+                                <a href="tags/{{ tag }}.html">{{ tag }}</a>
                             {% endfor %}
                         </span>
                     {% endif %}
@@ -26,20 +35,38 @@
         {% endfor %}
     </div>
 
-    {% if total_pages > 1 %}
-    <div class="pagination">
-        {% if current_page > 1 %}
-            <a href="{% if current_page == 2 %}index.html{% else %}page-{{ current_page - 1 }}.html{% endif %}">Previous</a>
-        {% endif %}
+    <div id="scroll-trigger"></div>
 
-        {% for page in range(1, total_pages + 1) %}
-            <a href="{% if page == 1 %}index.html{% else %}page-{{ page }}.html{% endif %}"
-               class="{% if page == current_page %}active{% endif %}">{{ page }}</a>
-        {% endfor %}
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const messageList = document.querySelector('.message-list');
+    const scrollTrigger = document.getElementById('scroll-trigger');
+    let currentPage = 1;
+    const totalPages = {{ total_pages }};
 
-        {% if current_page < total_pages %}
-            <a href="page-{{ current_page + 1 }}.html">Next</a>
-        {% endif %}
-    </div>
-    {% endif %}
+    const loadMorePosts = () => {
+        currentPage++;
+        if (currentPage <= totalPages) {
+            fetch(`page-${currentPage}.html`)
+                .then(response => response.text())
+                .then(html => {
+                    messageList.insertAdjacentHTML('beforeend', html);
+                })
+                .catch(error => console.error('Error fetching next page:', error));
+        } else {
+            observer.unobserve(scrollTrigger); // Stop observing when all pages are loaded
+        }
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+            loadMorePosts();
+        }
+    }, { threshold: 1.0 });
+
+    if (totalPages > 1) {
+        observer.observe(scrollTrigger);
+    }
+});
+</script>
 {% endblock %}
