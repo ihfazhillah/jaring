@@ -1,4 +1,4 @@
-frontmatter
+python-frontmatter
 jinja2
 markdown
 PyYAML

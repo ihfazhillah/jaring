@@ -14,26 +14,29 @@ def find_markdown_files(path):
     """Finds all markdown files in a given path."""
     return list(Path(path).glob("**/*.md"))
 
-def generate_image_from_text(text_content, post_id, image_index, author_name="Jaring"):
+def generate_image_from_text(text_content, post_id, image_index, author_name="Jaring", output_path="output"):
     """Generates an image from text content using pictex and returns its relative path."""
     try:
         image_filename = f"{post_id}-{image_index}.png"
-        image_path = Path("output/assets/images") / image_filename
-        image_path.parent.mkdir(parents=True, exist_ok=True) # Ensure directory exists
+        image_path = Path(output_path) / "assets/images" / image_filename
+        image_path.parent.mkdir(parents=True, exist_ok=True)  # Ensure directory exists
 
-        # Wrap text
-        wrapped_text = textwrap.fill(text_content, width=30)
+        # Split text into lines
+        lines = text_content.strip().split('\n')
 
         canvas = (
             Canvas()
-            .color("#FFFFFF") # Global text color
-            .background_color("#1DA1F2") # Twitter blue
-            .padding(32) # Increased padding for a bigger image
+            .color("#FFFFFF")  # Global text color
+            .background_color("#1DA1F2")  # Twitter blue
+            .padding(32)  # Increased padding for a bigger image
             .border_radius(10)
         )
 
+        # Create a list of Text objects for each line
+        text_lines = [Text(line).font_size(24) for line in lines]
+
         tweet_card_content = Column(
-            Text(wrapped_text).font_size(24), # Increased font size
+            *text_lines,  # Unpack the list of Text objects
             Row(
                 Text(author_name).font_size(12),
             ).gap(10),
@@ -41,13 +44,14 @@ def generate_image_from_text(text_content, post_id, image_index, author_name="Ja
 
         image = canvas.render(tweet_card_content)
         image.save(str(image_path))
-        compress_image(image_path) # Compress the generated image
-        
+        compress_image(image_path)  # Compress the generated image
+
         return f"assets/images/{image_filename}"
 
     except Exception as e:
         print(f"Error generating image for post {post_id} (index {image_index}): {e}")
-        raise # Re-raise the exception as per user's request
+        raise  # Re-raise the exception as per user's request
+
 
 def compress_image(file_path):
     """Compresses an image file using Pillow."""
@@ -63,13 +67,13 @@ def compress_image(file_path):
     except Exception as e:
         print(f"Error compressing image {file_path}: {e}")
 
-def copy_attachments(content, source_path, output_path):
+def copy_attachments(content, source_path, output_path, depth=0):
     """
     Finds all markdown image references, copies them to the output assets 
     directory, and updates the content with the new paths.
     """
     # Regex to find all markdown image syntaxes
-    img_regex = re.compile(r'![(.*?)](.*?)')
+    img_regex = re.compile(r'!\[([^\]]*)\]\(([^)]*)\)')
     
     def replace_path(match):
         alt_text = match.group(1)
@@ -85,7 +89,7 @@ def copy_attachments(content, source_path, output_path):
         
         # Determine the source of the image file
         # The path is relative to the markdown file, so resolve it
-        image_source_path = (source_file_path.parent / original_path).resolve()
+        image_source_path = (source_file_path.parent / original_path)
         
         # Define the destination path
         # We'll place it in an 'attachments' subdirectory to keep things clean
@@ -108,7 +112,7 @@ def copy_attachments(content, source_path, output_path):
 
         # Calculate the new relative path for the HTML
         # This should be relative to the final HTML file's location
-        new_relative_path = Path('..') / 'assets' / 'attachments' / image_source_path.name
+        new_relative_path = Path('../' * depth) / 'assets' / 'attachments' / image_source_path.name
         
         # Return the updated markdown image tag
         return f'![{alt_text}]({new_relative_path})'
@@ -225,7 +229,7 @@ def parse_obsidian_quotes(content):
 
     return callout_regex.sub(replace_with_callout, content)
 
-def parse_file(file_path, output_path, author_name):
+def parse_file(file_path, output_path, author_name, depth=0):
 
     """Parses a markdown file with frontmatter."""
     with open(file_path, "r") as f:
@@ -241,9 +245,9 @@ def parse_file(file_path, output_path, author_name):
         caption_content = parts[1] if len(parts) > 1 else None
 
         # Copy attachments and update content paths
-        main_content = copy_attachments(main_content, file_path, output_path)
+        main_content = copy_attachments(main_content, file_path, output_path, depth)
         if caption_content:
-            caption_content = copy_attachments(caption_content, file_path, output_path)
+            caption_content = copy_attachments(caption_content, file_path, output_path, depth)
 
         # Convert YouTube links to iframes
         main_content = convert_youtube_links_to_iframes(main_content)
@@ -265,7 +269,7 @@ def parse_file(file_path, output_path, author_name):
             post.caption = None
 
         for i, og_image_text in enumerate(extracted_image_texts):
-            generated_image_path = generate_image_from_text(og_image_text, post.metadata['id'], i, author_name)
+            generated_image_path = generate_image_from_text(og_image_text, post.metadata['id'], i, author_name, output_path)
             generated_images.append(generated_image_path)
 
         # Set og_image to the first generated image's path, if any
@@ -380,7 +384,8 @@ def main():
     # Pipeline
     files = find_markdown_files(content_path)
     
-    posts = [parse_file(file, output_path, config.get('image_author_name', 'Jaring')) for file in files]
+    # Parse all posts with depth 1 for individual pages
+    posts = [parse_file(file, output_path, config.get('image_author_name', 'Jaring'), depth=1) for file in files]
 
     # Sort posts by date (newest first)
     posts.sort(key=lambda p: p['metadata']['id'], reverse=True)
@@ -458,10 +463,20 @@ def main():
     # New logic for partial page generation for main index
     total_pages = (len(posts) + posts_per_page - 1) // posts_per_page
 
+    # Parse all posts with depth 0 for the index page
+    posts_for_index = [parse_file(file, output_path, config.get('image_author_name', 'Jaring'), depth=0) for file in files]
+    posts_for_index.sort(key=lambda p: p['metadata']['id'], reverse=True)
+
+    for post in posts_for_index:
+        # Replace single newlines with double newlines to create paragraphs
+        content_with_paragraphs = post["content"].replace('\n', '\n\n')
+        post["html"] = convert_markdown_to_html(content_with_paragraphs)
+
+
     # Generate the main index.html with the first page of posts
     main_index_path = output_path / "index.html"
     html = render_html(template_env, "index.html", {
-        "posts": posts[:posts_per_page],
+        "posts": posts_for_index[:posts_per_page],
         "tags": sorted(tags.keys()),
         "total_pages": total_pages,
         "depth": 0
@@ -472,7 +487,7 @@ def main():
     for page_num in range(1, total_pages):
         start_index = page_num * posts_per_page
         end_index = start_index + posts_per_page
-        paginated_posts = posts[start_index:end_index]
+        paginated_posts = posts_for_index[start_index:end_index]
 
         partial_page_path = output_path / f"page-{page_num + 1}.html"
         html = render_html(template_env, "post_cards.html", {
