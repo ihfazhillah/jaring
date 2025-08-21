@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if post %}{{ post.metadata.title }} | {{ site_name }}{% else %}{{ site_name }}{% endif %}</title>
-    {% if post and post.metadata.og_image %}
-    <meta property="og:image" content="{{ '../' * depth }}{{ post.metadata.og_image }}">
+    
+    {% if post %}
+    <meta property="og:title" content="{{ post.metadata.title }}">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="{{ site_url }}/messages/{{ post.metadata.id }}.html">
+    <meta property="og:description" content="{{ post.excerpt }}">
+    {% if post.metadata.og_image %}
+    <meta property="og:image" content="{{ site_url }}/{{ post.metadata.og_image }}">
     {% endif %}
+    {% endif %}
+
     <link rel="stylesheet" href="{{ '../' * depth }}assets/style.css">
 </head>
 <body>

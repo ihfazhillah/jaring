@@ -21,8 +21,13 @@ def generate_image_from_text(text_content, post_id, image_index, author_name="Ja
         image_path = Path(output_path) / "assets/images" / image_filename
         image_path.parent.mkdir(parents=True, exist_ok=True)  # Ensure directory exists
 
-        # Split text into lines
-        lines = text_content.strip().split('\n')
+        # Split text into lines first
+        initial_lines = text_content.strip().split('\n')
+
+        # Wrap each line and create a flat list of lines
+        wrapped_lines = []
+        for line in initial_lines:
+            wrapped_lines.extend(textwrap.wrap(line, width=30))
 
         canvas = (
             Canvas()
@@ -32,8 +37,8 @@ def generate_image_from_text(text_content, post_id, image_index, author_name="Ja
             .border_radius(10)
         )
 
-        # Create a list of Text objects for each line
-        text_lines = [Text(line).font_size(24) for line in lines]
+        # Create a list of Text objects for each wrapped line
+        text_lines = [Text(line).font_size(24) for line in wrapped_lines]
 
         tweet_card_content = Column(
             *text_lines,  # Unpack the list of Text objects
@@ -51,6 +56,8 @@ def generate_image_from_text(text_content, post_id, image_index, author_name="Ja
     except Exception as e:
         print(f"Error generating image for post {post_id} (index {image_index}): {e}")
         raise  # Re-raise the exception as per user's request
+
+
 
 
 def compress_image(file_path):
@@ -244,27 +251,29 @@ def parse_file(file_path, output_path, author_name, depth=0):
         main_content = parts[0]
         caption_content = parts[1] if len(parts) > 1 else None
 
-        # Copy attachments and update content paths
-        main_content = copy_attachments(main_content, file_path, output_path, depth)
-        if caption_content:
-            caption_content = copy_attachments(caption_content, file_path, output_path, depth)
-
-        # Convert YouTube links to iframes
-        main_content = convert_youtube_links_to_iframes(main_content)
-        if caption_content:
-            caption_content = convert_youtube_links_to_iframes(caption_content)
-
-        # Parse obsidian quotes
-        main_content = parse_obsidian_quotes(main_content)
-        if caption_content:
-            caption_content = parse_obsidian_quotes(caption_content)
-
         # Use FSM to parse notations and get modified content and extracted texts
         modified_content, extracted_image_texts = parse_img_notations_fsm(main_content)
-        post.content = modified_content # Update post.content with the FSM's output
+        
+        # Generate excerpt
+        if extracted_image_texts:
+            excerpt = textwrap.shorten(extracted_image_texts[0].strip(), width=150, placeholder="...")
+        else:
+            plain_text_content = re.sub(r'\!img{.*?}', '', main_content) # Remove !img tags
+            plain_text_content = re.sub(r'\!?\[.*?\]\(.*?\)', '', plain_text_content) # Remove markdown links/images
+            plain_text_content = re.sub(r'#+', '', plain_text_content) # Remove headings
+            excerpt = textwrap.shorten(plain_text_content.strip(), width=150, placeholder="...")
+
+        # Process the modified content
+        processed_content = copy_attachments(modified_content, file_path, output_path, depth)
+        processed_content = convert_youtube_links_to_iframes(processed_content)
+        processed_content = parse_obsidian_quotes(processed_content)
+        post.content = processed_content
 
         if caption_content:
-            post.caption = convert_markdown_to_html(caption_content.strip())
+            processed_caption = copy_attachments(caption_content, file_path, output_path, depth)
+            processed_caption = convert_youtube_links_to_iframes(processed_caption)
+            processed_caption = parse_obsidian_quotes(processed_caption)
+            post.caption = convert_markdown_to_html(processed_caption.strip())
         else:
             post.caption = None
 
@@ -284,7 +293,7 @@ def parse_file(file_path, output_path, author_name, depth=0):
             "caption": post.caption,
             "path": file_path,
             "date": date,
-            # "og_image_text": og_image_text, # This is no longer needed in the return dict
+            "excerpt": excerpt,
         }
 
 
@@ -379,6 +388,7 @@ def main():
     )
     template_env.globals['site_name'] = config['site_name']
     template_env.globals['footer_text'] = config['footer_text']
+    template_env.globals['site_url'] = config['site_url']
     template_env.filters['split'] = lambda value, delimiter: value.split(delimiter)
 
     # Pipeline
