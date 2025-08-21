@@ -201,7 +201,7 @@ def parse_obsidian_quotes(content):
     # Regex for > [!TYPE] [title] and subsequent quoted lines
     # It captures the type, an optional title, and the content block.
     callout_regex = re.compile(
-        r'''^>\s*\[!(?P<type>\\w+)(?:\s+(?P<title>.*?))?\]\s*
+        r'''^>\s*\[!(?P<type>\w+)(?:\s+(?P<title>.*?))?\]\s*
 (?P<content>(?:^>.*(?:\n|$))+)?''', re.DOTALL | re.MULTILINE
     )
 
@@ -223,7 +223,7 @@ def parse_obsidian_quotes(content):
         callout_html_content = convert_markdown_to_html('\n'.join(processed_content).strip())
 
         # Construct the HTML for the callout
-        html_output = f'<div class="callout {callout_type}">'
+        html_output = f'<div class="callout {callout_type}>'
         
         # Add title if present
         if callout_title:
@@ -235,6 +235,68 @@ def parse_obsidian_quotes(content):
         return html_output
 
     return callout_regex.sub(replace_with_callout, content)
+
+def resolve_internal_links(content, post_map, file_path, depth=0):
+    """Resolves internal links in both [[link-target]] and [text](link-target.md) formats."""
+    
+    # Regex for [[link-target]]
+    wiki_link_regex = re.compile(r'\[\[(.*?)\]\]')
+    # Regex for [text](link.md)
+    md_link_regex = re.compile(r'\[([^\]]+)\]\((?!https?://)([^\)]+\.md)\)')
+
+    def replace_wiki_link(match):
+        target = match.group(1)
+        if target in post_map:
+            post = post_map[target]
+            relative_path = Path('../' * depth) / 'messages' / f"{post['metadata']['id']}.html"
+            return f'<a href="{relative_path}">{post["metadata"]["title"]}</a>'
+        else:
+            print(f"Warning: Broken wiki link found for target: {target}")
+            return f'[[{target}]]'
+
+    def replace_md_link(match):
+        text = match.group(1)
+        target_path_str = match.group(2)
+        
+        # Resolve the relative path of the link target
+        source_dir = Path(file_path).parent
+        target_path = source_dir / target_path_str
+        
+        # Normalize the path to remove any ".."
+        target_path = target_path.resolve()
+
+        # Check if the resolved path is in our post_map
+        if str(target_path) in post_map:
+            post = post_map[str(target_path)]
+            relative_path = Path('../' * depth) / 'messages' / f"{post['metadata']['id']}.html"
+            return f'<a href="{relative_path}">{text}</a>'
+        else:
+            print(f"Warning: Broken markdown link found for target: {target_path_str}")
+            return match.group(0)
+
+    content = wiki_link_regex.sub(replace_wiki_link, content)
+    content = md_link_regex.sub(replace_md_link, content)
+    
+    return content
+
+def auto_detect_direction(content):
+    """
+    Automatically detects the direction of each line of text and adds a placeholder.
+    """
+    lines = content.split('\n')
+    processed_lines = []
+    for line in lines:
+        has_arabic = bool(re.search(r'[\u0600-\u06FF]', line))
+        has_latin = bool(re.search(r'[a-zA-Z]', line))
+
+        if has_arabic and not has_latin:
+            processed_lines.append(f'RTL_LINE: {line}')
+        elif has_arabic and has_latin:
+            processed_lines.append(f'LTR_LINE: {line}')
+        else:
+            processed_lines.append(line)
+    return '\n'.join(processed_lines)
+
 
 def parse_file(file_path, output_path, author_name, depth=0):
 
@@ -269,11 +331,14 @@ def parse_file(file_path, output_path, author_name, depth=0):
         processed_content = parse_obsidian_quotes(processed_content)
         post.content = processed_content
 
+        # Auto-detect direction for content and caption
+        post.content = auto_detect_direction(post.content)
         if caption_content:
             processed_caption = copy_attachments(caption_content, file_path, output_path, depth)
             processed_caption = convert_youtube_links_to_iframes(processed_caption)
             processed_caption = parse_obsidian_quotes(processed_caption)
             post.caption = convert_markdown_to_html(processed_caption.strip())
+            post.caption = auto_detect_direction(post.caption)
         else:
             post.caption = None
 
@@ -394,16 +459,25 @@ def main():
     # Pipeline
     files = find_markdown_files(content_path)
     
-    # Parse all posts with depth 1 for individual pages
+    # First pass: parse all posts
     posts = [parse_file(file, output_path, config.get('image_author_name', 'Jaring'), depth=1) for file in files]
-
-    # Sort posts by date (newest first)
     posts.sort(key=lambda p: p['metadata']['id'], reverse=True)
 
+    # Create a post map for resolving links
+    post_map = {post['metadata']['id']: post for post in posts}
+    post_map.update({str(post['path']): post for post in posts})
+
+    # Second pass: resolve links and generate HTML
     for post in posts:
+        post['content'] = resolve_internal_links(post['content'], post_map, post['path'], depth=1)
+        if post['caption']:
+            post['caption'] = resolve_internal_links(post['caption'], post_map, post['path'], depth=1)
+
         # Replace single newlines with double newlines to create paragraphs
         content_with_paragraphs = post["content"].replace('\n', '\n\n')
         post["html"] = convert_markdown_to_html(content_with_paragraphs)
+        post["html"] = post["html"].replace('<p>RTL_LINE: ', '<p dir="rtl">')
+        post["html"] = post["html"].replace('<p>LTR_LINE: ', '<p dir="ltr">')
 
     # Generate individual message pages
     for post in posts:
@@ -478,9 +552,14 @@ def main():
     posts_for_index.sort(key=lambda p: p['metadata']['id'], reverse=True)
 
     for post in posts_for_index:
+        post['content'] = resolve_internal_links(post['content'], post_map, post['path'], depth=0)
+        if post['caption']:
+            post['caption'] = resolve_internal_links(post['caption'], post_map, post['path'], depth=0)
         # Replace single newlines with double newlines to create paragraphs
         content_with_paragraphs = post["content"].replace('\n', '\n\n')
         post["html"] = convert_markdown_to_html(content_with_paragraphs)
+        post["html"] = post["html"].replace('<p>RTL_LINE: ', '<p dir="rtl">')
+        post["html"] = post["html"].replace('<p>LTR_LINE: ', '<p dir="ltr">')
 
 
     # Generate the main index.html with the first page of posts
