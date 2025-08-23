@@ -561,18 +561,22 @@ def main():
         })
         save_html(tag_index_path, html)
 
-        # Generate partial pages for the tag
+        # Generate subsequent pages for the tag
         for page_num in range(1, total_pages):
             start_index = page_num * posts_per_page
             end_index = start_index + posts_per_page
             paginated_posts = tagged_posts[start_index:end_index]
 
-            partial_page_path = tags_output_dir / f"{tag}-page-{page_num + 1}.html"
-            html = render_html(template_env, "post_cards.html", {
+            page_path = tags_output_dir / f"{tag}-page-{page_num + 1}.html"
+            html = render_html(template_env, "tag_index.html", {
+                "tag": tag,
                 "posts": paginated_posts,
+                "total_pages": total_pages,
+                "current_page": page_num + 1,
+                "page_numbers": range(1, total_pages + 1),
                 "depth": 1
             })
-            save_html(partial_page_path, html)
+            save_html(page_path, html)
 
     # New logic for partial page generation for main index
     total_pages = (len(posts) + posts_per_page - 1) // posts_per_page
@@ -604,18 +608,22 @@ def main():
     })
     save_html(main_index_path, html)
 
-    # Generate partial HTML files for subsequent pages for main index
+    # Generate subsequent pages for main index
     for page_num in range(1, total_pages):
         start_index = page_num * posts_per_page
         end_index = start_index + posts_per_page
         paginated_posts = posts_for_index[start_index:end_index]
 
-        partial_page_path = output_path / f"page-{page_num + 1}.html"
-        html = render_html(template_env, "post_cards.html", {
+        page_path = output_path / f"page-{page_num + 1}.html"
+        html = render_html(template_env, "index.html", {
             "posts": paginated_posts,
-            "depth": 0 # Partials are loaded from the root
+            "tags": sorted(tags.keys()),
+            "total_pages": total_pages,
+            "current_page": page_num + 1,
+            "page_numbers": range(1, total_pages + 1),
+            "depth": 0
         })
-        save_html(partial_page_path, html)
+        save_html(page_path, html)
 
     # Generate sitemap
     generate_sitemap(posts, output_path, config['site_url'])

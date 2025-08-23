@@ -6,10 +6,15 @@
     <div class="card tag-card">
         <h3>Tags</h3>
         <div class="metadata">
-            <div class="tags">
-                {% for tag in tags %}
-                    <a href="tags/{{ tag }}.html">{{ tag }}</a>
-                {% endfor %}
+            <div class="tags-accordion">
+                <span class="tags tags-wrapper">
+                    {% for tag in tags %}
+                        <a href="tags/{{ tag }}.html" class="tag-item">{{ tag }}</a>
+                    {% endfor %}
+                </span>
+                {% if tags|length > 5 %}
+                    <button class="show-more-tags">Show More</button>
+                {% endif %}
             </div>
         </div>
     </div>
@@ -38,14 +43,14 @@
     <nav class="pagination">
         {% if total_pages > 1 %}
             {% if current_page > 1 %}
-                <a href="page-{{ current_page - 1 }}.html">Previous</a>
+                <a href="{% if current_page == 2 %}index.html{% else %}page-{{ current_page - 1 }}.html{% endif %}">Previous</a>
             {% endif %}
 
             {% for page_num in page_numbers %}
                 {% if page_num == current_page %}
                     <a href="#" class="active">{{ page_num }}</a>
                 {% else %}
-                    <a href="page-{{ page_num }}.html">{{ page_num }}</a>
+                    <a href="{% if page_num == 1 %}index.html{% else %}page-{{ page_num }}.html{% endif %}">{{ page_num }}</a>
                 {% endif %}
             {% endfor %}
 
@@ -59,6 +64,47 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
+    const tagsWrapper = document.querySelector('.tags-wrapper');
+    const showMoreTags = document.querySelector('.show-more-tags');
+
+    if (showMoreTags) {
+        const tags = Array.from(tagsWrapper.querySelectorAll('.tag-item'));
+        const initialVisibleTags = 5;
+        let isExpanded = false;
+
+        // Initially hide excess tags
+        tags.slice(initialVisibleTags).forEach(tag => {
+            tag.style.display = 'none';
+        });
+
+        if (tags.length <= initialVisibleTags) {
+            showMoreTags.style.display = 'none';
+        }
+
+        showMoreTags.addEventListener('click', () => {
+            if (isExpanded) {
+                tags.slice(initialVisibleTags).forEach(tag => {
+                    tag.style.display = 'none';
+                });
+                showMoreTags.textContent = 'Show More';
+            } else {
+                tags.forEach(tag => {
+                    tag.style.display = 'inline-block';
+                });
+                showMoreTags.textContent = 'Show Less';
+            }
+            isExpanded = !isExpanded;
+        });
+    }
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    if (window.location.protocol === 'file:') {
+        return;
+    }
+
     const paginationNav = document.querySelector('.pagination');
     if (paginationNav) {
         paginationNav.style.display = 'none';
@@ -75,7 +121,10 @@ document.addEventListener('DOMContentLoaded', () => {
             fetch(`page-${currentPage}.html`)
                 .then(response => response.text())
                 .then(html => {
-                    messageList.insertAdjacentHTML('beforeend', html);
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(html, 'text/html');
+                    const newMessages = doc.querySelector('.message-list').innerHTML;
+                    messageList.insertAdjacentHTML('beforeend', newMessages);
                 })
                 .catch(error => console.error('Error fetching next page:', error));
         } else {
