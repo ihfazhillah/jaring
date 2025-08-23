@@ -135,7 +135,11 @@ footer {
 /* Responsive Styles */
 @media (max-width: 768px) {
     body {
-        padding: 10px;
+        padding: 15px;
+    }
+
+    .content-wrapper {
+        max-width: 100%;
     }
 }
 

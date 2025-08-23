@@ -35,10 +35,35 @@
         {% endfor %}
     </div>
 
+    <nav class="pagination">
+        {% if total_pages > 1 %}
+            {% if current_page > 1 %}
+                <a href="page-{{ current_page - 1 }}.html">Previous</a>
+            {% endif %}
+
+            {% for page_num in page_numbers %}
+                {% if page_num == current_page %}
+                    <a href="#" class="active">{{ page_num }}</a>
+                {% else %}
+                    <a href="page-{{ page_num }}.html">{{ page_num }}</a>
+                {% endif %}
+            {% endfor %}
+
+            {% if current_page < total_pages %}
+                <a href="page-{{ current_page + 1 }}.html">Next</a>
+            {% endif %}
+        {% endif %}
+    </nav>
+
     <div id="scroll-trigger"></div>
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
+    const paginationNav = document.querySelector('.pagination');
+    if (paginationNav) {
+        paginationNav.style.display = 'none';
+    }
+
     const messageList = document.querySelector('.message-list');
     const scrollTrigger = document.getElementById('scroll-trigger');
     let currentPage = 1;

@@ -14,6 +14,32 @@ def find_markdown_files(path):
     """Finds all markdown files in a given path."""
     return list(Path(path).glob("**/*.md"))
 
+HIJRI_MONTHS = {
+    "01": "Muharrom",
+    "02": "Shofar",
+    "03": "Robi'ul awwal",
+    "04": "Rabi' al-thani",
+    "05": "Jumada al-ula",
+    "06": "Jumada al-ukhra",
+    "07": "Rajab",
+    "08": "Sha'ban",
+    "09": "Ramadan",
+    "10": "Shawwal",
+    "11": "Dhu al-Qi'dah",
+    "12": "Dhu al-Hijjah",
+}
+
+def to_hijri_month_name(date_str):
+    """Converts a Hijri date string to a formatted string with the month name."""
+    try:
+        year, month, day = date_str.split('-')
+        month_name = HIJRI_MONTHS.get(month, month)
+        return f"{day} {month_name} {year}"
+    except Exception as e:
+        print(f"Error converting Hijri date {date_str}: {e}")
+        return date_str
+
+
 def generate_image_from_text(text_content, post_id, image_index, author_name="Jaring", output_path="output"):
     """Generates an image from text content using pictex and returns its relative path."""
     try:
@@ -40,16 +66,18 @@ def generate_image_from_text(text_content, post_id, image_index, author_name="Ja
         # Create a list of Text objects for each wrapped line
         text_lines = [Text(line).font_size(24) for line in wrapped_lines]
 
+        # Create a column for the content with a 2px gap
+        content_column = Column(*text_lines).gap(2)
+
         tweet_card_content = Column(
-            *text_lines,  # Unpack the list of Text objects
+            content_column,
             Row(
                 Text(author_name).font_size(12),
             ).gap(10),
-        ).gap(10)
+        ).gap(4)
 
         image = canvas.render(tweet_card_content)
         image.save(str(image_path))
-        compress_image(image_path)  # Compress the generated image
 
         return f"assets/images/{image_filename}"
 
@@ -304,7 +332,7 @@ def parse_file(file_path, output_path, author_name, depth=0):
     with open(file_path, "r") as f:
         post = frontmatter.load(f)
         date_parts = post.metadata.get("id", "").split("-")[:3]
-        date = "-".join(date_parts)
+        date = to_hijri_month_name("-".join(date_parts))
 
         generated_images = [] # To store paths of generated images
 
@@ -527,6 +555,8 @@ def main():
             "tag": tag,
             "posts": tagged_posts[:posts_per_page],
             "total_pages": total_pages,
+            "current_page": 1,
+            "page_numbers": range(1, total_pages + 1),
             "depth": 1
         })
         save_html(tag_index_path, html)
@@ -568,6 +598,8 @@ def main():
         "posts": posts_for_index[:posts_per_page],
         "tags": sorted(tags.keys()),
         "total_pages": total_pages,
+        "current_page": 1,
+        "page_numbers": range(1, total_pages + 1),
         "depth": 0
     })
     save_html(main_index_path, html)
